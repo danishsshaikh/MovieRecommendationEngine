@@ -38,6 +38,11 @@ df["combined_features"] = df.apply(combine_features,axis=1)
 
 ##Step 4: Create count matrix from this new combined column
 
+cv = CountVectorizer()
+
+count_matrix = cv.fit_transform(df["combined_features"])
+
+
 ##Step 5: Compute the Cosine Similarity based on the count_matrix
 
 movie_user_likes = "Avatar"
