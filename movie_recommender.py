@@ -11,7 +11,8 @@ def get_index_from_title(title):
 ##################################################
 
 ##Step 1: Read CSV File
-
+df = pd.read_csv("movie_dataset.csv")
+print (df.head())
 ##Step 2: Select Features
 
 ##Step 3: Create a column in DF which combines all selected features
