@@ -15,7 +15,7 @@ df = pd.read_csv("movie_dataset.csv")
 #print (df.head())
 print (df.columns)
 ##Step 2: Select Features
-
+features = ['keywords','cast','genres','director']
 ##Step 3: Create a column in DF which combines all selected features
 
 ##Step 4: Create count matrix from this new combined column
