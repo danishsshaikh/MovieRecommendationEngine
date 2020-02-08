@@ -52,6 +52,11 @@ movie_user_likes = "Avatar"
 
 ## Step 6: Get index of this movie from its title
 
+movie_index = get_index_from_title(movie_user_likes)
+
+similar_movies =  list(enumerate(cosine_sim[movie_index]))
+
+
 ## Step 7: Get a list of similar movies in descending order of similarity score
 
 
