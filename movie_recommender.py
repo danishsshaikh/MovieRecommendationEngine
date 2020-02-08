@@ -34,7 +34,7 @@ def combine_features(row):
 
 df["combined_features"] = df.apply(combine_features,axis=1)
 
-print "Combined Features:", df["combined_features"].head()
+#print "Combined Features:", df["combined_features"].head()
 
 ##Step 4: Create count matrix from this new combined column
 
