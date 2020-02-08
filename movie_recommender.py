@@ -23,6 +23,19 @@ def combine_features(row):
 
 ##Step 3: Create a column in DF which combines all selected features
 
+for feature in features:
+	df[feature] = df[feature].fillna('')
+
+def combine_features(row):
+	try:
+		return row['keywords'] +" "+row['cast']+" "+row["genres"]+" "+row["director"]
+	except:
+		print "Error:", row	
+
+df["combined_features"] = df.apply(combine_features,axis=1)
+
+print "Combined Features:", df["combined_features"].head()
+
 ##Step 4: Create count matrix from this new combined column
 
 ##Step 5: Compute the Cosine Similarity based on the count_matrix
