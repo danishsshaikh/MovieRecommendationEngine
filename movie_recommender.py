@@ -30,8 +30,7 @@ def combine_features(row):
 	try:
 		return row['keywords'] +" "+row['cast']+" "+row["genres"]+" "+row["director"]
 	except:
-		print "Error:", row	
-
+		print ("Error:", row)
 df["combined_features"] = df.apply(combine_features,axis=1)
 
 #print "Combined Features:", df["combined_features"].head()
@@ -63,3 +62,10 @@ sorted_similar_movies = sorted(similar_movies,key=lambda x:x[1],reverse=True)
 
 
 ## Step 8: Print titles of first 50 movies
+
+i=0
+for element in sorted_similar_movies:
+		print (get_title_from_index(element[0]))
+		i=i+1
+		if i>50:
+			break
